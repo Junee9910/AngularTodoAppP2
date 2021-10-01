@@ -7,15 +7,20 @@ import { TodoEditComponent } from './users/todo-edit/todo-edit.component';
 import { TodoDeleteComponent } from './users/todo-delete/todo-delete.component';
 
 const routes: Routes = [
-  {path:'list', component:TodoListComponent},
-  {path:'add', component:TodoAddComponent},
-  {path:'view/:id', component:TodoViewComponent},
-  {path:'edit/:id', component:TodoEditComponent},
-  {path:'delete/:id', component:TodoDeleteComponent}
+  { path: 'add', component: TodoAddComponent },
+  {
+    path: 'list',
+    children: [
+      { path: '', component: TodoListComponent },
+      { path: 'view/:id', component: TodoViewComponent },
+      { path: 'edit/:id', component: TodoEditComponent },
+      { path: 'delete/:id', component: TodoDeleteComponent },
+    ],
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

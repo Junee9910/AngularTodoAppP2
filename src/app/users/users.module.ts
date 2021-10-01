@@ -6,6 +6,8 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { TodoDeleteComponent } from './todo-delete/todo-delete.component';
 import { TodoViewComponent } from './todo-view/todo-view.component';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import {MatListModule} from '@angular/material/list';
   ],
   imports: [
     CommonModule,
-    MatListModule
+    MatListModule, 
+    MatCardModule,
+    RouterModule
   ]
 })
 export class UsersModule { }
