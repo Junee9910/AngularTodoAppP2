@@ -7,7 +7,14 @@ import { TodoDeleteComponent } from './todo-delete/todo-delete.component';
 import { TodoViewComponent } from './todo-view/todo-view.component';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+
 
 
 @NgModule({
@@ -20,9 +27,18 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     MatListModule, 
     MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
     RouterModule
+  ],
+  providers:[
+    { provide:MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue:{duration:2500}}
   ]
 })
 export class UsersModule { }
