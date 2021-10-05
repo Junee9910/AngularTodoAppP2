@@ -14,7 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -35,6 +35,7 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/materia
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatTableModule,
     RouterModule
   ],
   providers:[
