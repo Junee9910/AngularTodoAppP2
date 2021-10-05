@@ -1,1 +1,25 @@
-<p>todo-edit works!</p>
+<mat-card>
+    <mat-card-title>Update User</mat-card-title>
+    <mat-card-content>
+<div *ngIf="dataLoaded">
+    <form class="edit-user" [formGroup]="editUserForm" (submit)="updateUser()">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" formControlName="name">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </p><p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email Address</mat-label>
+              <input matInput placeholder="Email Address" formControlName="email">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+            <button mat-raised-button color="primary">Save</button>
+          </p>
+    </form>
+</div>
+    </mat-card-content>
+</mat-card>
